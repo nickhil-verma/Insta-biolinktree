@@ -19,7 +19,11 @@ const Heading = () => {
     setAnimationActive(true);
   }, []);
 
-  
+  const [isFormVisible, setFormVisible] = useState(false);
+
+  const handleButtonClick = () => {
+    setFormVisible(!isFormVisible);
+  };
  
   
   const form = useRef();
@@ -64,6 +68,8 @@ const Heading = () => {
       <div className="hero">
          <a href="https://nickhil-verma.netlify.app/"><button className="button">PORTFOLIO</button></a> 
           <a  href="tel:+919060177870"><button className="button">CALL ME</button></a>
+          <button onClick={handleButtonClick} className="button">PING ME </button>
+          {isFormVisible && (
           <form className="inputfeilds" ref={form} onSubmit={sendEmail}   >
             <input type="text" name="user_name" className="textfeild" placeholder="YOUR NAME" required />
             <input type="email" name="user_email" className="textfeild" placeholder="YOUR EMAIL" required />
@@ -72,7 +78,7 @@ const Heading = () => {
             <button className="button submit" value="Send" >SEND</button>
             
             <span className="submit-msg">{done && "Message Sent. Confirmation is sent to your mail"}</span>
-          </form>
+          </form>)}
       </div>
       <span className="footer" >N &nbsp;I&nbsp; K&nbsp; H&nbsp; I&nbsp; L&nbsp; V&nbsp; E &nbsp;R&nbsp; M&nbsp; A&nbsp; |&nbsp; O&nbsp; S&nbsp; C&nbsp;</span>
     </>
