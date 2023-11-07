@@ -17,7 +17,7 @@ const Heading = () => {
   useEffect(() => {
     // When the component mounts, trigger the animation
     setAnimationActive(true);
-  }, []);
+  }, [0]);
 
   const [isFormVisible, setFormVisible] = useState(false);
 

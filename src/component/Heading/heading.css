@@ -83,7 +83,7 @@
 .hero{
     display: flex;
     flex-direction: column;
-    margin-top: 15vh;
+    margin-top: 10vh;
     margin-bottom: 1vh;
 }
 
@@ -96,10 +96,10 @@
     justify-content: center;
     align-items: center;
     height: 6vh;
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(255, 255, 255);
     width: 30vw;
     border-radius: 50px;
-    
+    padding-left: 10px;
 
 }
 .inputfeilds{
@@ -115,15 +115,17 @@
     margin-bottom: 1.4vh;
     justify-content: center;
     align-items: center;
-    
-    background-color: rgb(219, 219, 219);
+    padding: 10px 0 0 10px;
+    background-color: rgb(255, 255, 255);
     width: 30vw;
     border-radius: 10px;
 }
 .submit{
     width: 10vw;
 }
-but
+button{
+    
+}
 .submit-msg{
     color: greenyellow;
 }
